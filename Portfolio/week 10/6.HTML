@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table of 5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h2 {
+            font-size: 24px;
+            text-align: center;
+        }
+        #multiplicationTable {
+            list-style-type: none; /* Remove bullet points */
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            font-size: 20px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Multiplication Table of 5</h2>
+    <ul id="multiplicationTable"></ul>
+
+    <script>
+        // Get the ul element where we will display the table
+        var multiplicationTable = document.getElementById("multiplicationTable");
+
+        // Loop to generate and display the multiplication table
+        for (var i = 1; i <= 10; i++) {
+            // Create a list item element
+            var listItem = document.createElement("li");
+
+            // Calculate the multiplication result
+            var result = 5 * i;
+
+            // Set the text content of the list item to display the multiplication
+            listItem.textContent = "5 × " + i + " = " + result;
+
+            // Append the list item to the ul element
+            multiplicationTable.appendChild(listItem);
+        }
+    </script>
+</body>
+</html>

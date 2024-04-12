@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Array Elements</title>
+</head>
+<body>
+    <h2>Join Array Elements</h2>
+    <div id="output"></div>
+
+    <script>
+        // Sample array
+        var myColor = ["Red", "Green", "White", "Black"];
+
+        // Join array elements using the join() method with default separator (comma)
+        var result1 = myColor.toString();
+        var result2 = myColor.join(",");
+        var result3 = myColor.join("+");
+
+        // Display the results
+        document.getElementById("output").innerHTML = "<p>" + result1 + "</p>" +
+                                                       "<p>" + result2 + "</p>" +
+                                                       "<p>" + result3 + "</p>";
+    </script>
+</body>
+</html>

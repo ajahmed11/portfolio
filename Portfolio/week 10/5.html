@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display Images One by One</title>
+</head>
+<body>
+  <h2>Display Images One by One</h2>
+
+  <!-- Container for displaying images -->
+  <div id="imageContainer"></div>
+
+  <script>
+    var imageNames = ["1.jpg", "2.jpg", "3.jpg", "4.jpg"];
+    var currentIndex = 0;
+
+    function displayNextImage() {
+      var image = document.createElement("img");
+      image.src = imageNames[currentIndex];
+      image.alt = "Image " + (currentIndex + 1);
+
+      // Set width and height of the image
+      image.style.width = "400px"; // Set width to 200 pixels
+      image.style.height = "auto"; // Let the height adjust automatically
+
+      document.getElementById("imageContainer").appendChild(image);
+
+      currentIndex++;
+      if (currentIndex < imageNames.length) {
+        setTimeout(displayNextImage, 1000); // Display next image after 1000ms (1 second)
+      }
+    }
+
+    // Start displaying images
+    displayNextImage();
+  </script>
+</body>
+</html>

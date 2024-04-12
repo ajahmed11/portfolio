@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table with Alternate Background</title>
+</head>
+<body>
+    <h2>Table with Alternate Background</h2>
+    
+    <div id="tableContainer"></div>
+
+    <script>
+        // Create table element
+        var table = document.createElement("table");
+        table.style.width = "50%";
+        table.style.borderCollapse = "collapse";
+        table.style.margin = "20px auto";
+
+        // Define headers
+        var headers = ["S.No.", "Name", "Image"];
+
+        // Create header row
+        var headerRow = document.createElement("tr");
+        for (var i = 0; i < headers.length; i++) {
+            var headerCell = document.createElement("th");
+            headerCell.textContent = headers[i];
+            headerCell.style.border = "1px solid black";
+            headerCell.style.padding = "8px";
+            headerCell.style.textAlign = "center";
+            headerCell.style.fontWeight = "bold";
+            headerRow.appendChild(headerCell);
+        }
+        table.appendChild(headerRow);
+
+        // Define number of rows
+        var numRows = 5;
+
+        // Create body rows
+        for (var i = 0; i < numRows; i++) {
+            var row = document.createElement("tr");
+
+            for (var j = 0; j < headers.length; j++) {
+                var cell = document.createElement("td");
+                cell.textContent = headers[j] + " " + (i + 1);
+                cell.style.border = "1px solid black";
+                cell.style.padding = "8px";
+                cell.style.textAlign = "center";
+
+                // Alternate background color
+                if (i % 2 === 0) {
+                    cell.style.backgroundColor = "#ddd";
+                } else {
+                    cell.style.backgroundColor = "#fff";
+                }
+
+                row.appendChild(cell);
+            }
+            table.appendChild(row);
+        }
+
+        // Append table to the container
+        document.getElementById("tableContainer").appendChild(table);
+    </script>
+</body>
+</html>

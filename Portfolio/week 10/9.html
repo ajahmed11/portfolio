@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Sum and Product</title>
+</head>
+<body>
+    <h2>Array Sum and Product</h2>
+    <div id="output"></div>
+
+    <script>
+        // Sample array of integers
+        var numbers = [1, 2, 3, 4, 5,7,6,9];
+
+        // Compute the sum of the array elements
+        var sum = 0;
+        for (var i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+        }
+
+        // Compute the product of the array elements
+        var product = 1;
+        for (var i = 0; i < numbers.length; i++) {
+            product *= numbers[i];
+        }
+
+        // Display the sum and product on the webpage
+        var outputDiv = document.getElementById("output");
+        outputDiv.innerHTML = "<p>Sum of the array elements: " + sum + "</p>" +
+                              "<p>Product of the array elements: " + product + "</p>";
+    </script>
+</body>
+</html>
